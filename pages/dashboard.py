@@ -35,22 +35,27 @@ with tab1:
     - **Global Volume:** Managing massive throughput derived from over 6 million aggregated records.
     - **Geospatial Spread:** Tracking trip density across multiple regional sectors in New Jersey and connecting transit corridors.
     - **Temporal Trends:** Hourly volume curves highlighting peak commuter rushes versus off-peak lulls.
+    - **Interactive Mapping:** You can filter data dynamically by **county** simply by clicking on specific regions within the map.
+    - **Yearly Filtering:** Use the filter controls located on the **upper right** of the dashboard frame to isolate metrics by specific operating years.
     """)
 
 with tab2:
     st.markdown("### Line Punctuality Analysis")
     st.write("""
-    - **Reliability Metrics:** Assessing delay distributions across major active lines (e.g., NJ Coast Line, Northeast Corridor).
-    - **Bottleneck Identification:** Pinpointing specific segments experiencing recurring schedule variances.
-    - **Operational Impact:** How regional weather patterns and high-density scheduling compound delays.
+    - **Key Delay Metrics:** Evaluates system-wide performance showing an **Average Delay of 4.2 mins** and a **19.0% Severe Delay (> 6 Min)** rate[cite: 2].
+    - **Line Name Filter:** Use the dropdown filter in the upper right to instantly isolate and analyze performance for individual transit lines[cite: 2].
+    - **Hourly Delay Heat Map:** Visualizes temporal delay concentrations across hours (0–23) for all major routes (such as the Northeast Corridor, NJ Coast Line, and Gladstone Branch)[cite: 2].
+    - **Sequential Delay Accumulation:** Tracks how delays propagate and accumulate across sequence numbers[cite: 2].
+    - **Geospatial Route Map:** Visualizes line alignments and performance variations geographically across New Jersey[cite: 2].
     """)
 
 with tab3:
     st.markdown("### Station Risk & Operational Bottlenecks")
     st.write("""
-    - **High-Risk Hubs:** Analyzing congestion patterns at critical transfer stations like Hoboken and New York Penn Station.
-    - **Platform Capacity:** Evaluating dwell times and passenger flow friction points during peak operating hours.
-    - **Mitigation Insights:** Strategic takeaways for improving terminal throughput.
+    - **Station Score & Delay Metrics:** Displays overarching system metrics including a **Station Score of 82.37** and an **Average Delay of 4.2 mins**.
+    - **Interactive Filtering:** You can filter the dashboard by **line** using the dropdown control in the upper right, and then **click on a station** on the map or matrix to filter and focus on an individual station.
+    - **Station Risk Matrix:** A scatter plot mapping **Trip Volume vs. Average Delay** against a **> 6 min SLA limit** line, highlighting quadrants like *High Trip Volume, Unacceptable Delay*.
+    - **Weather Impact Analysis:** Integrates monthly environmental metrics from January through December, tracking **Wind Speed**, **Temperature**, and **Precipitation**.
     """)
 
 # Container CSS Override to maximize horizontal screen real estate
