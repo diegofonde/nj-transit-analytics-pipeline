@@ -7,15 +7,15 @@ st.title("Interactive Tableau Dashboard 📊")
 
 st.markdown("""
 Welcome to the data visualization hub! This application provides deep-dive analytics into 
-NJ Transit and Amtrak rail operations. Explore high-level executive performance, individual line punctuality, 
-and critical station bottleneck risks across the three specialized dashboards below.
+NJ Transit and Amtrak rail operations. Explore the primary executive overview below, 
+and use the tabs further down to read detailed deep-dives into line punctuality and station bottlenecks.
 """)
 
 # Engineering Context & Navigation Tips
 with st.expander("ℹ️ **Engineering & Architecture Notes (Dataset & Layout)**", expanded=False):
     st.markdown("""
     * **Data Volume & Compute Limitation:** This dashboard aggregates **6 million+ rows** of operational data. Due to Tableau Public's browser-side compute boundaries on global aggregations, certain top-level total metrics may render as `0.0M`. Detailed route-level metrics, filtering, and geospatial maps remain fully functional.
-    * **Display & Navigation:** To preserve the dense KPI layout without reflowing components, these embedded views use fixed-width canvas sizing. **If viewing on a smaller screen, please scroll horizontally across the embedded frame to view the complete dashboard.**
+    * **Display & Navigation:** To preserve the dense KPI layout without reflowing components, this view uses a fixed-width canvas sizing. **If viewing on a smaller screen, please scroll horizontally across the embedded frame to view the complete dashboard.**
     """)
 
 # Container CSS Override to maximize horizontal screen real estate
@@ -29,59 +29,51 @@ st.markdown("""
     </style>
 """, unsafe_allow_html=True)
 
-# Define Tabs
+# --- SINGLE EMBEDDED TABLEAU DASHBOARD (Always Visible) ---
+st.subheader("NJ Transit Executive Operations Overview")
+
+tableau_iframe = """
+<div style="width: 100%; height: 100%; overflow: hidden; display: flex; justify-content: center;">
+    <iframe src="https://public.tableau.com/views/nj_transit/NJTransitExecutiveOperationsOverview?:embed=yes&:showVizHome=no&:toolbar=yes" 
+            width="2800px" 
+            height="900px" 
+            style="border:none; transform: scale(0.85); transform-origin: top center;">
+    </iframe>
+</div>
+"""
+components.html(tableau_iframe, height=900, width=1900, scrolling=True)
+
+st.markdown("---")
+st.subheader("🔍 Deep-Dive Analysis & Insights")
+st.markdown("Explore the detailed breakdowns below for each operational focus area corresponding to the dataset:")
+
+# --- TABS FOR IN-DEPTH TEXT & METRIC BREAKDOWNS ---
 tab1, tab2, tab3 = st.tabs([
-    "NJ Transit Executive Operations Overview", 
-    "Line Punctuality", 
-    "Station Risk & Operational Bottlenecks"
+    "Executive Overview Deep-Dive", 
+    "Line Punctuality Breakdown", 
+    "Station Risk & Bottlenecks Analysis"
 ])
 
-# --- TAB 1: Executive Overview ---
 with tab1:
-    st.subheader("Executive Operations Overview")
-    st.caption("High-level system metrics, active line counts, regional trip volume maps, and hourly travel trends.")
-    
-    iframe_tab1 = """
-    <div style="width: 100%; height: 100%; overflow: hidden; display: flex; justify-content: center;">
-        <iframe src="https://public.tableau.com/views/nj_transit/NJTransitExecutiveOperationsOverview?:embed=yes&:showVizHome=no&:toolbar=yes" 
-                width="2800px" 
-                height="900px" 
-                style="border:none; transform: scale(0.85); transform-origin: top center;">
-        </iframe>
-    </div>
-    """
-    components.html(iframe_tab1, height=900, width=1900, scrolling=True)
+    st.markdown("### Executive Operations Summary")
+    st.write("""
+    - **Global Volume:** Managing massive throughput derived from over 6 million aggregated records.
+    - **Geospatial Spread:** Tracking trip density across multiple regional sectors in New Jersey and connecting transit corridors.
+    - **Temporal Trends:** Hourly volume curves highlighting peak commuter rushes versus off-peak lulls.
+    """)
 
-# --- TAB 2: Line Punctuality ---
 with tab2:
-    st.subheader("Line Punctuality & Delay Analysis")
-    st.caption("On-time performance breakdown, route-by-route delays, and peak vs. off-peak reliability statistics.")
-    
-    # Replace the URL src below with your specific Tableau view URL for Line Punctuality
-    iframe_tab2 = """
-    <div style="width: 100%; height: 100%; overflow: hidden; display: flex; justify-content: center;">
-        <iframe src="https://public.tableau.com/views/nj_transit/LinePunctuality?:embed=yes&:showVizHome=no&:toolbar=yes" 
-                width="2800px" 
-                height="900px" 
-                style="border:none; transform: scale(0.85); transform-origin: top center;">
-        </iframe>
-    </div>
-    """
-    components.html(iframe_tab2, height=900, width=1900, scrolling=True)
+    st.markdown("### Line Punctuality Analysis")
+    st.write("""
+    - **Reliability Metrics:** Assessing delay distributions across major active lines (e.g., NJ Coast Line, Northeast Corridor).
+    - **Bottleneck Identification:** Pinpointing specific segments experiencing recurring schedule variances.
+    - **Operational Impact:** How regional weather patterns and high-density scheduling compound delays.
+    """)
 
-# --- TAB 3: Station Risk & Bottlenecks ---
 with tab3:
-    st.subheader("Station Risk & Operational Bottlenecks")
-    st.caption("Station congestion scoring, platform capacity constraints, and critical bottleneck identification.")
-    
-    # Replace the URL src below with your specific Tableau view URL for Station Risk
-    iframe_tab3 = """
-    <div style="width: 100%; height: 100%; overflow: hidden; display: flex; justify-content: center;">
-        <iframe src="https://public.tableau.com/views/nj_transit/StationRiskOperationalBottlenecks?:embed=yes&:showVizHome=no&:toolbar=yes" 
-                width="2800px" 
-                height="900px" 
-                style="border:none; transform: scale(0.85); transform-origin: top center;">
-        </iframe>
-    </div>
-    """
-    components.html(iframe_tab3, height=900, width=1900, scrolling=True)
+    st.markdown("### Station Risk & Operational Bottlenecks")
+    st.write("""
+    - **High-Risk Hubs:** Analyzing congestion patterns at critical transfer stations like Hoboken and New York Penn Station.
+    - **Platform Capacity:** Evaluating dwell times and passenger flow friction points during peak operating hours.
+    - **Mitigation Insights:** Strategic takeaways for improving terminal throughput.
+    """)
