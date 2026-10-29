@@ -25,7 +25,7 @@ tableau_iframe = """
 </div>
 """
 
-components.html(tableau_iframe,  height = 750, width = 1500, scrolling=False)
+components.html(tableau_iframe,  height = 900, width = 1700, scrolling=False)
 
 st.markdown("""
     Welcome to the data visualization hub! This page features an interactive Tableau dashboard hosted on Tableau Public. 
