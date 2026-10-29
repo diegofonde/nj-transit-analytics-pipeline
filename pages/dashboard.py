@@ -18,8 +18,8 @@ st.markdown("""
 tableau_iframe = """
 <div style="width: 100%; overflow: hidden; display: flex; justify-content: center;">
     <iframe src="https://public.tableau.com/views/nj_transit/NJTransitExecutiveOperationsOverview?:embed=yes&:showVizHome=no&:toolbar=yes" 
-            width="1200px" 
-            height="850px" 
+            width="1700px" 
+            height="900px" 
             style="border:none; transform: scale(0.85); transform-origin: 0 0;">
     </iframe>
 </div>
