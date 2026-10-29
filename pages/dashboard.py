@@ -28,7 +28,7 @@ tableau_iframe = """
 """
 
 # Increase this width integer to stretch it further across your screen
-components.html(tableau_iframe, height=900, width=1750, scrolling=False)
+components.html(tableau_iframe, height=900, width=2000, scrolling=False)
 
 st.markdown("""
     Welcome to the data visualization hub! This page features an interactive Tableau dashboard hosted on Tableau Public. 
