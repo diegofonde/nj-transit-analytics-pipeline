@@ -20,7 +20,7 @@ tableau_iframe = """
     <iframe src="https://public.tableau.com/views/nj_transit/NJTransitExecutiveOperationsOverview?:embed=yes&:showVizHome=no&:toolbar=yes" 
             width="3000px" 
             height="900px" 
-            style="border:none; transform: scale(0.85); transform-origin: 0 0;">
+            style="border:none; transform: scale(0.65); transform-origin: 0 0;">
     </iframe>
 </div>
 """
