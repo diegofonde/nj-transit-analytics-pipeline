@@ -16,11 +16,11 @@ st.markdown("""
 
 # Custom responsive iframe code
 tableau_iframe = """
-<div class="tableau-container" style="width: 100%; display: flex; justify-content: center;">
+<div style="width: 100%; overflow: hidden; display: flex; justify-content: center;">
     <iframe src="https://public.tableau.com/views/nj_transit/NJTransitExecutiveOperationsOverview?:embed=yes&:showVizHome=no&:toolbar=yes" 
-            width="100%" 
+            width="1200px" 
             height="850px" 
-            style="border:none; max-width: 100%;">
+            style="border:none; transform: scale(0.85); transform-origin: 0 0;">
     </iframe>
 </div>
 """
