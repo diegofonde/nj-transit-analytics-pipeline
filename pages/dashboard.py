@@ -16,8 +16,8 @@ st.markdown("""
 
 # Custom responsive iframe code
 tableau_iframe = """
-<div class="tableau-container">
-    <iframe src="https://public.tableau.com/app/profile/diego.gabriel.fondevilla/viz/nj_transit/NJTransitExecutiveOperationsOverview?publish=yes 
+<div class="tableau-container" style="width: 100%; display: flex; justify-content: center;">
+    <iframe src="https://public.tableau.com/views/nj_transit/NJTransitExecutiveOperationsOverview?:embed=yes&:showVizHome=no&:toolbar=yes" 
             width="100%" 
             height="850px" 
             style="border:none; max-width: 100%;">
@@ -25,7 +25,7 @@ tableau_iframe = """
 </div>
 """
 
-components.html(tableau_iframe, height=870, scrolling=False)
+components.html(tableau_iframe,  height = 750, width = 1500, scrolling=False)
 
 st.markdown("""
     Welcome to the data visualization hub! This page features an interactive Tableau dashboard hosted on Tableau Public. 
