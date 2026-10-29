@@ -20,12 +20,12 @@ tableau_iframe = """
     <iframe src="https://public.tableau.com/views/nj_transit/NJTransitExecutiveOperationsOverview?:embed=yes&:showVizHome=no&:toolbar=yes" 
             width="3000px" 
             height="900px" 
-            style="border:none; transform: scale(0.65); transform-origin: 0 0;">
+            style="border:none; transform: scale(0.72); transform-origin: 0 0;">
     </iframe>
 </div>
 """
 
-components.html(tableau_iframe,  height = 900, width = 3000, scrolling=False)
+components.html(tableau_iframe,  height = 900, width = 4000, scrolling=False)
 
 st.markdown("""
     Welcome to the data visualization hub! This page features an interactive Tableau dashboard hosted on Tableau Public. 
