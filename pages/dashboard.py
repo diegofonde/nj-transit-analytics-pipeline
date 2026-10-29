@@ -20,15 +20,15 @@ st.markdown("""
 tableau_iframe = """
 <div style="width: 100%; overflow: hidden; display: flex; justify-content: center;">
     <iframe src="https://public.tableau.com/views/nj_transit/NJTransitExecutiveOperationsOverview?:embed=yes&:showVizHome=no&:toolbar=yes" 
-            width="7000px" 
+            width="2200px" 
             height="900px" 
-            style="border:none; transform: scale(0.72); transform-origin: 0 0;">
+            style="border:none; transform: scale(0.72); transform-origin: top center;">
     </iframe>
 </div>
 """
 
-components.html(tableau_iframe,  height = 900, width = 7000, scrolling=False)
-
+# Set width to match wide-mode bounds (e.g., 1450 to 1500) instead of 7000
+components.html(tableau_iframe, height=900, width=1450, scrolling=False)
 st.markdown("""
     Welcome to the data visualization hub! This page features an interactive Tableau dashboard hosted on Tableau Public. 
     The page features 3 main dashboards, 
