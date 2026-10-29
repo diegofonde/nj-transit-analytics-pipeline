@@ -4,7 +4,7 @@ st.title("Home🏠")
 st.header("Welcome to the home page!")
 
 st.markdown("""
-This web application is dedicated to showcasing the technical and analytical skills I have developed throughout my current position as a Pre-Sales Technical Engineer and in roles.
+This web application is dedicated to showcasing the technical and analytical skills I have developed throughout my current position as a Pre-Sales Technical Engineer and in past roles.
 
 ### 🎯 Project Overview
 Started on **October 23, 2026**, this project was designed and built within a single week to highlight enterprise-ready consulting capabilities. It analyzes NJ Transit system performance data spanning **2018–2020**, integrating multiple complex data sources:
