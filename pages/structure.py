@@ -40,6 +40,18 @@ with col3:
     * Computed core risk metrics, delay timings, and the 6-minute SLA benchmark.
     * Saved final optimized tables as **CSVs back into Databricks Volumes** for Tableau.
     """)
+    with st.expander("📊 **Understanding the Station Risk & Score Metric**"):
+        st.markdown("""
+        **What is the Station Score?**
+        * The **Station Score** is a composite reliability and operational efficiency index evaluated out of 100. 
+        * **Higher Scores (e.g., 80+):** Indicate stable terminal operations, manageable dwell times, and minimal schedule variances relative to passenger throughput.
+        * **Lower Scores:** Signal active bottleneck conditions, persistent station congestion, or severe delay propagation across connecting lines.
+
+        **Key Evaluation Factors:**
+        1. **SLA Compliance:** Proportion of train arrivals departing within the acceptable **6-minute SLA threshold**.
+        2. **Volume-to-Delay Ratio:** Weighing total passenger/trip volume against average delay duration to prioritize high-impact operational nodes.
+        3. **Environmental Sensitivity:** Factoring in seasonal weather severity (wind, temp, precipitation) that compounds platform dwell times.
+        """)
 
 st.markdown("---")
 
