@@ -42,11 +42,11 @@ with tab1:
 with tab2:
     st.markdown("### Line Punctuality Analysis")
     st.write("""
-    - **Key Delay Metrics:** Evaluates system-wide performance showing an **Average Delay of 4.2 mins** and a **19.0% Severe Delay (> 6 Min)** rate[cite: 2].
-    - **Line Name Filter:** Use the dropdown filter in the upper right to instantly isolate and analyze performance for individual transit lines[cite: 2].
-    - **Hourly Delay Heat Map:** Visualizes temporal delay concentrations across hours (0–23) for all major routes (such as the Northeast Corridor, NJ Coast Line, and Gladstone Branch)[cite: 2].
-    - **Sequential Delay Accumulation:** Tracks how delays propagate and accumulate across sequence numbers[cite: 2].
-    - **Geospatial Route Map:** Visualizes line alignments and performance variations geographically across New Jersey[cite: 2].
+    - **Key Delay Metrics:** Evaluates system-wide performance showing an **Average Delay of 4.2 mins** and a **19.0% Severe Delay (> 6 Min)** rate.
+    - **Line Name Filter:** Use the dropdown filter in the upper right to instantly isolate and analyze performance for individual transit lines.
+    - **Hourly Delay Heat Map:** Visualizes temporal delay concentrations across hours (0–23) for all major routes (such as the Northeast Corridor, NJ Coast Line, and Gladstone Branch).
+    - **Sequential Delay Accumulation:** Tracks how delays propagate and accumulate across sequence numbers.
+    - **Geospatial Route Map:** Visualizes line alignments and performance variations geographically across New Jersey.
     """)
 
 with tab3:
