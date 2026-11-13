@@ -2,7 +2,7 @@
 
 An end-to-end data engineering and business intelligence application analyzing **6+ million operational rail records** across NJ Transit and Amtrak corridors. Built with a Databricks Medallion architecture, interactive Tableau Public dashboards, and a custom-styled Streamlit web interface.
 
-🔗 **[Live Streamlit Application]([https://nj-transit-analytics-pipeline-u94setjspttwnrya2jfita.streamlit.app])** | 📊 **[Tableau Public Workbook]([https://nj-transit-analytics-pipeline-u94setjspttwnrya2jfita.streamlit.app])**
+🔗 **[Live Streamlit Application](https://nj-transit-analytics-pipeline-u94setjspttwnrya2jfita.streamlit.app)** | 📊 **[Tableau Public Workbook](https://public.tableau.com/views/nj_transit/NJTransitExecutiveOperationsOverview)**
 
 ---
 
